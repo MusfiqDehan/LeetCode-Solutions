@@ -1,3 +1,4 @@
+```
 ​Some body might think that we can find min and max number from the array so that we can get the max profit. But here is one catch
 For Example:
 prices=[3,4,1,6]
@@ -44,3 +45,4 @@ here price[left] is greater than price[right] so we will move left pointer to th
 n--> length of array
 Time Complexity: O(n)
 Space Complexity: O(1)
+```
