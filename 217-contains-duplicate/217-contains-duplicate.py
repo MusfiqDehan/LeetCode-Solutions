@@ -7,7 +7,7 @@ class Solution:
         for n in nums:
             if n in hash_set:
                 return True
-            hash_set.add(n)
+            hash_set.add(n) # Storing value in set
         return False
         
         
