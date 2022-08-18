@@ -8,21 +8,28 @@
 #         avg_salary = remaining_salary / len_counted
 #         return avg_salary
 
+# class Solution:
+#     def average(self, salary: List[int]) -> float:
+#         nmin, nmax = float('inf'), float('-inf')
+#         nsum = count = 0
+#         for val in salary:
+#             if val < nmin:
+#                 nmin = val
+#             if val > nmax:
+#                 nmax = val
+#             nsum = nsum + val
+#             count = count + 1
+            
+#         avg = (nsum - (nmax + nmin)) / (count - 2)
+        
+#         return avg
+
 class Solution:
     def average(self, salary: List[int]) -> float:
-        nmin, nmax = float('inf'), float('-inf')
-        nsum = count = 0
-        for val in salary:
-            if val < nmin:
-                nmin = val
-            if val > nmax:
-                nmax = val
-            nsum = nsum + val
-            count = count + 1
-            
-        avg = (nsum - (nmax + nmin)) / (count - 2)
-        
-        return avg
+        salary.sort() 
+        del salary[0]
+        del salary[-1]
+        return statistics.mean(salary)
 
         
         
