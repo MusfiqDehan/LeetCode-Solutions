@@ -1,12 +1,20 @@
 class Solution:
     def plusOne(self, digits):
-        s = [str(integer) for integer in digits]
+        int_list_to_str_list = [str(integer) for integer in digits]
+        print(int_list_to_str_list)
         
-        a_string = "".join(s)
-
-        res = int(a_string)+1
+        a_string = "".join(int_list_to_str_list)
+        print(a_string)
         
-        res = [int(x) for x in str(res)]
+        an_integer = int(a_string)
+        print(an_integer)
         
-        return res
+        # Increment one
+        an_integer = an_integer + 1
+        print(an_integer)
+        
+        int_to_int_list = [int(x) for x in str(an_integer)]
+        print(int_to_int_list)
+        
+        return int_to_int_list
     
