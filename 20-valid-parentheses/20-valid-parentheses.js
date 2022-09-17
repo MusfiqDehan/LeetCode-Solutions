@@ -1,20 +1,16 @@
-class Solution:
-    def isValid(self, s: str) -> bool:
-        a_stack = []
-        mapping = {
-            ')': '(',
-            '}': '{',
-            ']': '['
-        }
-        
-        for char in s:
-            if char in mapping.values():
-                a_stack.append(char)
-            elif char in mapping.keys():
-                if a_stack == [] or mapping[char] != a_stack.pop():
-                    return False
-            else:
-                return False
-            
-        return a_stack == []
-        
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+  while (
+    s.indexOf("{}") !== -1 ||
+    s.indexOf("[]") !== -1 ||
+    s.indexOf("()") !== -1
+  ) {
+    s = s.replace("()", "");
+    s = s.replace("{}", "");
+    s = s.replace("[]", "");
+  }
+  return s === "";
+};
