@@ -1,6 +1,8 @@
 class Solution {
+    
 public:
     int commonFactors(int a, int b) {
+        
         int cnt = 0;
         int n = min(a, b) + 1;
 
@@ -9,6 +11,7 @@ public:
                 cnt++;
             }
         }
+        
         return cnt;
     }
 };
